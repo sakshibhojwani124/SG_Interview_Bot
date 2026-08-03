@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: local-voice-ai
+Version: 0.1.0
+Summary: Local voice AI assistant: a single supervised process bundling LiveKit Agents, llama.cpp, Nemotron STT, and Kokoro TTS.
+Requires-Python: >=3.11
+License-File: LICENCE
+Requires-Dist: livekit-agents[openai,silero,turn-detector]~=1.3
+Requires-Dist: livekit-plugins-noise-cancellation~=0.2
+Requires-Dist: livekit-api>=0.8
+Requires-Dist: livekit-wakeword>=0.2
+Requires-Dist: python-dotenv
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
+Requires-Dist: httpx
+Requires-Dist: pydantic>=2
+Requires-Dist: psycopg[binary]>=3.1
+Requires-Dist: numpy
+Requires-Dist: soundfile
+Requires-Dist: python-multipart
+Requires-Dist: livekit-plugins-simli
+Provides-Extra: ml
+Requires-Dist: torch; extra == "ml"
+Requires-Dist: torchaudio; extra == "ml"
+Requires-Dist: nemo-toolkit[asr]; extra == "ml"
+Requires-Dist: kokoro>=0.9; extra == "ml"
+Requires-Dist: huggingface_hub; extra == "ml"
+Provides-Extra: whisper
+Requires-Dist: faster-whisper>=1.0; extra == "whisper"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Dynamic: license-file
