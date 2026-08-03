@@ -1,0 +1,2 @@
+[console_scripts]
+local-voice-ai = local_voice_ai.__main__:main
